@@ -8,13 +8,15 @@ import { Theme } from "~/theme";
 
 import { store } from "~/store";
 
+import { GlobalStyle } from "~/styles/global";
+
 function RouteWrapper({
   component: Component,
   isPrivate = false,
   ...rest
 }: any) {
   const state: any = store.getState();
-  const { signed }: any = state.auth;
+  const signed: any = true;
 
   if (!signed && isPrivate) {
     return <Redirect to="/" />;
@@ -31,6 +33,7 @@ function RouteWrapper({
         {...rest}
         render={(props) => (
           <Layout>
+            <GlobalStyle />
             <Component {...props} />
           </Layout>
         )}

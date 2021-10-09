@@ -32,12 +32,16 @@ export const defaultBar = (
     -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
     /* background-color: "transparent"; */
     border-radius: ${borderRadius}px;
-
   }
 `;
 
 export const GlobalStyle = createGlobalStyle`
   html,body,#root{
     ${defaultBar("#9e9e9e", 10, 1)}
+    padding:0;
+    margin:0;
+  }
+  h1{
+    color: ${({ theme }) => theme?.typography?.color};
   }
 `;
