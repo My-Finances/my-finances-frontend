@@ -8,6 +8,8 @@ declare module "styled-components" {
       type: string;
       primary: string;
       secondary: string;
+      expenses: string;
+      incomes: string;
       background: {
         default: string;
         paper: string;
