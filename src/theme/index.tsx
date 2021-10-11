@@ -4,8 +4,10 @@ import { ThemeProvider, DefaultTheme } from "styled-components";
 const light: DefaultTheme = {
   palette: {
     type: "light",
-    primary: "#4b0082",
+    primary: "#5f77ff",
     secondary: "#008080",
+    expenses: "#f44336",
+    incomes: "#66bb6a",
     background: {
       default: "#ffffff",
       paper: "#f5f6fc",
@@ -21,6 +23,8 @@ const dark: DefaultTheme = {
     type: "dark",
     primary: "#4e6aff",
     secondary: "#028080",
+    expenses: "#d32f2f",
+    incomes: "#388e3c",
     background: {
       default: "#202020",
       paper: "#333333",
@@ -33,7 +37,7 @@ const dark: DefaultTheme = {
 
 const ThemeDefault = ({ children }: any) => {
   const { themeDefault } = useSelector((state: any) => state.root);
-  const defaultTheme = !themeDefault ? light : dark;
+  const defaultTheme = themeDefault ? light : dark;
 
   return <ThemeProvider theme={defaultTheme}>{children}</ThemeProvider>;
 };

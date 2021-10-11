@@ -40,8 +40,11 @@ export const GlobalStyle = createGlobalStyle`
     ${defaultBar("#9e9e9e", 10, 1)}
     padding:0;
     margin:0;
+    font-family: "Maven Pro", sans-serif;
+
   }
   h1{
     color: ${({ theme }) => theme?.typography?.color};
   }
+
 `;
