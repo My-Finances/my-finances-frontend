@@ -9,3 +9,8 @@ export const Content = styled.div`
   padding: 40px 15px;
   min-height: 55vh;
 `;
+
+export const ToggleThemeButton = styled.button`
+    z-index: 2;
+    position: relative;
+}`;
